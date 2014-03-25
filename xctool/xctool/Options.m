@@ -289,6 +289,11 @@
     [[[ReporterTask alloc] initWithReporterPath:[XCToolReportersPath() stringByAppendingPathComponent:@"pretty"]
                                      outputPath:@"-"] autorelease];
     [self.reporters addObject:reporterTask];
+
+    ReporterTask *userNotificationsReporterTask =
+    [[[ReporterTask alloc] initWithReporterPath:[XCToolReportersPath() stringByAppendingPathComponent:@"user-notifications"]
+                                     outputPath:@"-"] autorelease];
+    [self.reporters addObject:userNotificationsReporterTask];
   }
 
   return YES;
